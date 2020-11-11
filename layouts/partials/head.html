@@ -9,19 +9,19 @@
         <!-- Google / Search Engine Tags -->
         <meta itemprop="name" content="{{ .Site.Title }}">
         <meta itemprop="description" content="{{ .Param "description" }}">
-        <meta itemprop="image" content="images/meta.png">
+        <meta itemprop="image" content="images/portrait.png">
 
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="{{ .Site.BaseURL }}">
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ .Site.Title }}">
         <meta property="og:description" content="{{ .Param "description" }}">
-        <meta property="og:image" content="images/meta.png ">
+        <meta property="og:image" content="images/portrait.png ">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="{{ .Site.Title }}">
-        <meta name="twitter:description" content="images/meta.png">
+        <meta name="twitter:description" content="images/portrait.png">
     {{- else if .Description }}
         <meta name="description" content="{{ .Description }}">
     {{- end }}
