@@ -54,7 +54,13 @@
     <!-- RSS -->
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-    {{ if hugo.Environment | eq "production" }}
-        {{ template "_internal/google_analytics_async.html" . }}
-    {{ end }}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Param "GoogleAnalyticsID" }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{{ .Param "GoogleAnalyticsID" }}');
+    </script>
 </head>
